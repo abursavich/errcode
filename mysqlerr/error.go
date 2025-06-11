@@ -76,6 +76,7 @@ var mysqlCodes = map[uint16]codes.Code{
 	1203: codes.ResourceExhausted, // ER_TOO_MANY_USER_CONNECTIONS; User %s already has more than 'max_user_connections' active connections
 	1206: codes.ResourceExhausted, // ER_LOCK_TABLE_FULL; The total number of locks exceeds the lock table size
 	1226: codes.ResourceExhausted, // ER_USER_LIMIT_REACHED; User '%s' has exceeded the '%s' resource (current value: %ld)
+	1461: codes.ResourceExhausted, // ER_MAX_PREPARED_STMT_COUNT_REACHED; Can't create more than max_prepared_stmt_count statements (current value: %lu)
 
 	1213: codes.Aborted, // ER_LOCK_DEADLOCK; Deadlock found when trying to get lock; try restarting transaction
 
