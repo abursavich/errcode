@@ -72,9 +72,9 @@ func (s ErrorCoders) ErrorCode(err error) codes.Code {
 	return codes.Unknown
 }
 
-// Compact flattens and dedupes a slice of ErrorCoders.
-func Compact(slice ErrorCoders) ErrorCoders {
-	return compact(nil, slice...)
+// Compact flattens and dedupes ErrorCoders.
+func Compact(coders ...ErrorCoder) ErrorCoders {
+	return compact(nil, coders...)
 }
 
 func compact(slice ErrorCoders, elems ...ErrorCoder) ErrorCoders {
